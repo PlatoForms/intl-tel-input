@@ -2068,7 +2068,7 @@ var factoryOutput = (() => {
               dropdownClasses += " iti--inline-dropdown";
             }
             if (this.options.customDropdownClass) {
-              dropdownClasses += ` ${this.options.customDropdownClass}`;
+              dropdownClasses += " " + this.options.customDropdownClass;
             }
             this.dropdown = createEl("div", { class: dropdownClasses });
             this.dropdown.appendChild(this.dropdownContent);

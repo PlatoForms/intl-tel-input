@@ -1875,7 +1875,7 @@ class K2 {
           this.dropdownContent
         ), this._appendListItems(), S && this._updateSearchResultsText(), c) {
           let P = "iti iti--container";
-          f ? P += " iti--fullscreen-popup" : P += " iti--inline-dropdown", this.options.customDropdownClass && (P += ` ${this.options.customDropdownClass}`), this.dropdown = T("div", { class: P }), this.dropdown.appendChild(this.dropdownContent);
+          f ? P += " iti--fullscreen-popup" : P += " iti--inline-dropdown", this.options.customDropdownClass && (P += " " + this.options.customDropdownClass), this.dropdown = T("div", { class: P }), this.dropdown.appendChild(this.dropdownContent);
         } else
           this.countryContainer.appendChild(this.dropdownContent);
       }
