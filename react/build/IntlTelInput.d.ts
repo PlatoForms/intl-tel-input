@@ -336,6 +336,7 @@ declare module "intl-tel-input" {
         allowDropdown: boolean;
         autoPlaceholder: string;
         containerClass: string;
+        customDropdownClass: string;
         countryOrder: string[];
         countrySearch: boolean;
         customPlaceholder: ((selectedCountryPlaceholder: string, selectedCountryData: object) => string) | null;

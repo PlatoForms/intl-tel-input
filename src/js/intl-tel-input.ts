@@ -61,6 +61,7 @@ interface AllOptions {
   allowDropdown: boolean;
   autoPlaceholder: string;
   containerClass: string;
+  customDropdownClass: string;
   countryOrder: string[];
   countrySearch: boolean;
   customPlaceholder: ((selectedCountryPlaceholder: string, selectedCountryData: object) => string) | null;
@@ -96,6 +97,8 @@ const defaults: AllOptions = {
   autoPlaceholder: "polite",
   //* Modify the parentClass.
   containerClass: "",
+  //* Modify the dropdownClass.
+  customDropdownClass: "",
   //* The order of the countries in the dropdown. Defaults to alphabetical.
   countryOrder: null,
   //* Add a country search input at the top of the dropdown.
@@ -703,6 +706,10 @@ export class Iti {
           } else {
             dropdownClasses += " iti--inline-dropdown";
           }
+          if (this.options.customDropdownClass) {
+            dropdownClasses += ` ${this.options.customDropdownClass}`;
+          }
+
           this.dropdown = createEl("div", { class: dropdownClasses });
           this.dropdown.appendChild(this.dropdownContent);
         } else {

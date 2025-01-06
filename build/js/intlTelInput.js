@@ -1658,6 +1658,8 @@ var factoryOutput = (() => {
     autoPlaceholder: "polite",
     //* Modify the parentClass.
     containerClass: "",
+    //* Modify the dropdownClass.
+    customDropdownClass: "",
     //* The order of the countries in the dropdown. Defaults to alphabetical.
     countryOrder: null,
     //* Add a country search input at the top of the dropdown.
@@ -2065,6 +2067,9 @@ var factoryOutput = (() => {
               dropdownClasses += " iti--fullscreen-popup";
             } else {
               dropdownClasses += " iti--inline-dropdown";
+            }
+            if (this.options.customDropdownClass) {
+              dropdownClasses += ` ${this.options.customDropdownClass}`;
             }
             this.dropdown = createEl("div", { class: dropdownClasses });
             this.dropdown.appendChild(this.dropdownContent);

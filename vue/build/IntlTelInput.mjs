@@ -1601,6 +1601,8 @@ const T = {
   autoPlaceholder: "polite",
   //* Modify the parentClass.
   containerClass: "",
+  //* Modify the dropdownClass.
+  customDropdownClass: "",
   //* The order of the countries in the dropdown. Defaults to alphabetical.
   countryOrder: null,
   //* Add a country search input at the top of the dropdown.
@@ -1873,7 +1875,7 @@ class G {
           this.dropdownContent
         ), this._appendListItems(), c && this._updateSearchResultsText(), o) {
           let g = "iti iti--container";
-          a ? g += " iti--fullscreen-popup" : g += " iti--inline-dropdown", this.dropdown = y("div", { class: g }), this.dropdown.appendChild(this.dropdownContent);
+          a ? g += " iti--fullscreen-popup" : g += " iti--inline-dropdown", this.options.customDropdownClass && (g += ` ${this.options.customDropdownClass}`), this.dropdown = y("div", { class: g }), this.dropdown.appendChild(this.dropdownContent);
         } else
           this.countryContainer.appendChild(this.dropdownContent);
       }
