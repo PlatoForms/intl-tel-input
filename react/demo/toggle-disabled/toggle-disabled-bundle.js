@@ -25250,7 +25250,7 @@
       //* Note: to target Android Mobiles (and not Tablets), we must find 'Android' and 'Mobile'
       /Android.+Mobile|webOS|iPhone|iPod|BlackBerry|IEMobile|Opera Mini/i.test(
         navigator.userAgent
-      ) || window.innerWidth <= 500
+      )
     ) : false,
     //* The number type to enforce during validation.
     validationNumberTypes: ["MOBILE"]
